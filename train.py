@@ -14,9 +14,3 @@ train_results = model.train(
 # Evaluate model performance on the validation set
 metrics = model.val()
 
-# Perform object detection on an image
-results = model("path/to/image.jpg")
-results[0].show()
-
-# Export the model to ONNX format
-path = model.export(format="onnx")  # return path to exported model
