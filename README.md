@@ -3,5 +3,5 @@
 ## To Install Dependencies
 ```pip install ultralytics```
 
-## To run training/prediction
+## To run training
 ```python3 train.py```
