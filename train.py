@@ -14,3 +14,6 @@ train_results = model.train(
 # Evaluate model performance on the validation set
 metrics = model.val()
 
+
+results = model("horses.jpg")
+results[0].show()
