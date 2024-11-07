@@ -6,5 +6,6 @@
 ## To run training
 ```python3 train.py```
 
+Citations
 
-[4]Glenn Jocher, Jing Qiu, and Ayush Chaurasia. 2023. Ultralytics YOLO. Retrieved from https://github.com/ultralytics/ultralytics
+[1] Glenn Jocher, Jing Qiu, and Ayush Chaurasia. 2023. Ultralytics YOLO. Retrieved from https://github.com/ultralytics/ultralytics
