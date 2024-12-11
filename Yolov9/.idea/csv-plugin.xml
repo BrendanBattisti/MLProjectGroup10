@@ -17,21 +17,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\runs\train\yolov9-c3\results.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\runs\train\yolov9-c6\results.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry />
       </map>
     </option>
   </component>
