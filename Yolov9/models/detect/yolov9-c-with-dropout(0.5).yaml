@@ -98,7 +98,7 @@ head:
    [ -1, 1, nn.Dropout, [ 0.5 ] ],  # 27
 
    # elan-1 block
-   [-1, 1, RepNCSPELAN4, [256, 128, 64, 1, 1]],  # 28
+   [-1, 1, RepNCSPELAN4, [256, 128, 64, 1, xc]],  # 28
 
    # avg-conv down fuse
    [-1, 1, ADown, [256]],  # 29-P3/8
