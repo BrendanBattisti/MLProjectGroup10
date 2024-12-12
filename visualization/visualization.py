@@ -26,18 +26,19 @@ import pandas as pd
 if not os.path.exists("images"):
     os.mkdir("images")
 
-def bar_graph(metric, title, csv_path):
+def bar_graph(metric_no_dropout, metric_with_dropout, title, csv_path):
     data = pd.read_csv(csv_path)
-    fig = px.bar(data, x='Class', y=metric,  title=title, range_y=[0, 1.1])
+    fig = px.bar(data, x='Class', y=[metric_no_dropout, metric_with_dropout],  title=title, range_y=[0, 1.1])
+    fig.update_layout(barmode='group') 
     fig.show()
     save_path = f"images/{title}-{metric}.png"
     fig.write_image(save_path)
 
-file_paths = [("No Dropout", "raw_summary_data_no_dropout.csv"), ("Dropout", "raw_summary_data_dropout.csv")]
+file_paths = [("No Dropout vs. Dropout (0.5)", "raw_summary_data_both.csv"),]
 # metrics = ["P"]
-metrics = ["P","R","mAP50-95","mAP50"]
+metrics = [("P", "P-Dropout"), ("R","R-Dropout"), ("mAP50-95", "mAP50-95-Dropout"), ("mAP50", "mAP50-Dropout")]
 
 for path in file_paths:
     for metric in metrics:
-        bar_graph(metric, path[0], path[1])
+        bar_graph(metric[0], metric[1], path[0], path[1])
 
