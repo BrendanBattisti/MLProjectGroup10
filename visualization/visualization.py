@@ -26,12 +26,14 @@ import pandas as pd
 if not os.path.exists("images"):
     os.mkdir("images")
 
+# Some really messy code which tries to make a bar graph for each metric within the csv file
+
 def bar_graph(metric_no_dropout, metric_with_dropout, title, csv_path):
     data = pd.read_csv(csv_path)
     fig = px.bar(data, x='Class', y=[metric_no_dropout, metric_with_dropout],  title=title, range_y=[0, 1.1])
     fig.update_layout(barmode='group') 
     fig.show()
-    save_path = f"images/{title}-{metric}.png"
+    save_path = f"images/{title}-{metric_no_dropout}.png"
     fig.write_image(save_path)
 
 file_paths = [("No Dropout vs. Dropout (0.5)", "raw_summary_data_both.csv"),]
