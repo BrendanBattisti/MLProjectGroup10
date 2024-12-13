@@ -15,7 +15,7 @@ fig.write_image("images/training_precision.png")
 data = pd.read_csv("results_both.csv")
 fig = px.line(data, x='epoch', y=['metrics/recall', 'metrics/recall_dropout'], title='Recall No Dropout vs. Dropout (0.5)', range_y=[0, 0.7])
 fig.show()
-fig.write_image("images/training_precision.png")
+fig.write_image("images/training_recall.png")
 
 # mAP-50-95
 data = pd.read_csv("results_both.csv")
